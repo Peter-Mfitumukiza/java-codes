@@ -1,0 +1,1 @@
+alert("Warning: This a web app is built using Java");

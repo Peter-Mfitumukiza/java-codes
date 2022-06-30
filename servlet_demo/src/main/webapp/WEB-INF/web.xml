@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+    <display-name>servlet_demo</display-name>
+<!--    <welcome-file-list>-->
+<!--        <welcome-file>index.jsp</welcome-file>-->
+<!--    </welcome-file-list>-->
+    <context-param>
+        <param-name>jdbcURL</param-name>
+        <param-value>jdbc:mysql://localhost:3306/servlet_demo?characterEncoding=utf8</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>jdbcUsername</param-name>
+        <param-value>peter</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>jdbcPassword</param-name>
+        <param-value>2021</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>students</servlet-name>
+        <servlet-class>com.example.servlet_demo.controller.Students</servlet-class>
+    </servlet>
+<!--    <servlet>-->
+<!--        <servlet-name>helloServlet</servlet-name>-->
+<!--        <servlet-class>com.example.servlet_demo.HelloServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>helloServlet</servlet-name>-->
+<!--        <url-pattern>/hello-servlet</url-pattern>-->
+<!--        <url-pattern>/hello-servlet/student</url-pattern>-->
+<!--        <url-pattern>/hello-servlet/student/insert</url-pattern>-->
+<!--        <url-pattern>/hello-servlet/link</url-pattern>-->
+<!--        <url-pattern>/hello-servlet/student/new</url-pattern>-->
+<!--    </servlet-mapping>-->
+    <servlet-mapping>
+        <servlet-name>students</servlet-name>
+        <url-pattern>/students</url-pattern>
+        <url-pattern>/students/new</url-pattern>
+        <url-pattern>/students/insert</url-pattern>
+        <url-pattern>/students/delete</url-pattern>
+        <url-pattern>/students/edit</url-pattern>
+        <url-pattern>/students/update</url-pattern>
+        <url-pattern>/students/list</url-pattern>
+        <!--        <url-pattern>/Students/insert></url-pattern>-->
+<!--        <url-pattern>/Students/new</url-pattern>-->
+<!--        <url-pattern>/Students/delete</url-pattern>-->
+<!--        <url-pattern>/Students/update</url-pattern>-->
+<!--        <url-pattern>/Students/edit</url-pattern>-->
+    </servlet-mapping>
+</web-app>
